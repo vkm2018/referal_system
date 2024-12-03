@@ -22,11 +22,8 @@ pip install -r requirements.txt
 
 /manage.py runserver
 
-    Запустить бота
+    Запустить redis
 
-/manage.py bot
+sudo systemctl start redis
 
-    Документация Swagger
-
-http://127.0.0.1:8000/swagger/
 
