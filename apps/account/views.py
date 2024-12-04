@@ -1,5 +1,4 @@
 import time
-
 from django.shortcuts import render, redirect
 from rest_framework import status
 from rest_framework.response import Response
@@ -16,8 +15,6 @@ def create_invite_code():
     return ''.join(random.choices(string.ascii_letters + string.digits, k=6))
 
 class CodeView(APIView):
-
-
 
     def post(self, request):
         serializer = PhoneSerializer(data=request.data)
