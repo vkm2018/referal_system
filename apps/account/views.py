@@ -1,4 +1,6 @@
 import time
+
+import django
 from django.shortcuts import render, redirect
 from rest_framework import status
 from rest_framework.response import Response
@@ -6,10 +8,11 @@ from rest_framework.views import APIView
 import string
 import random
 from redis import Redis
+django.setup()
 from apps.account.models import User
 from apps.account.serializers import PhoneSerializer, CodeSerializer
 
-redis = Redis(host='hammersystems-f3387d65e5e0.herokuapp.com', port=6379, db=0)
+redis = Redis(host='web-production-90c8.up.railway.app', port=6379, db=0)
 
 def create_invite_code():
     return ''.join(random.choices(string.ascii_letters + string.digits, k=6))

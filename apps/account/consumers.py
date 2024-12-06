@@ -1,8 +1,8 @@
-
+import django
 from channels.generic.websocket import WebsocketConsumer
 import json
 from django.template.loader import get_template
-
+django.setup()
 from apps.account.models import User
 
 
