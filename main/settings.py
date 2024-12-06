@@ -140,8 +140,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-REDIS_HOST = 'localhost'
-REDIS_PORT = 6379
+#REDIS_HOST = 'localhost'
+#REDIS_PORT = 6379
 
 CACHES = {
     'default': {

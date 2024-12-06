@@ -9,7 +9,7 @@ from redis import Redis
 from apps.account.models import User
 from apps.account.serializers import PhoneSerializer, CodeSerializer
 
-redis = Redis(host='localhost', port=6379, db=0)
+redis = Redis(host='hammersystems-f3387d65e5e0.herokuapp.com', port=6379, db=0)
 
 def create_invite_code():
     return ''.join(random.choices(string.ascii_letters + string.digits, k=6))
